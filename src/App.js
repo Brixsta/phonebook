@@ -4,11 +4,8 @@ import List from './List';
 
 class App extends React.Component {
 
-  constructor () {
-    super();
 
-
-    this.state = {
+    state = {
       people: [
         {name: "boris", number: '502-321-2231'},
         {name: "baron", number: '111-991-1001'},
@@ -20,7 +17,7 @@ class App extends React.Component {
       ],
       filtered: null
     }
-  }
+
   render () {
     const filteredPeople = this.state.filtered;
     const people = this.state.people;
@@ -31,8 +28,7 @@ class App extends React.Component {
     const filterList = (value)=> {
       let current = this.state.people;
       let result = current.filter((item) => {
-        let regex = new RegExp(value, 'gi');
-        return item.name.match(regex)
+        return item.name.slice(0,value.length).match(value)
         });
 
       this.setState({filtered: result});
