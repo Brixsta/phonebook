@@ -7,7 +7,7 @@
 }
 
 .wrapper {
-  background-color: whitesmoke;
+  background-color: white;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -61,17 +61,6 @@
   border: solid 5px rgb(0, 96, 222);
   position: relative;
   user-select: none;
-}
-
-.phone-book-title::after {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: -10px;
-  height: 90px;
-  width: 120%;
-  opacity: 0.4;
-  background-image: linear-gradient(rgb(255, 255, 255), rgb(237, 237, 237));
 }
 
 .phone-number-text {
